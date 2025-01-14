@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "metal-being-425514-b4",
+  "private_key_id": "5564001788c042c28969ade3e1c9ba58d1f4b7b2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDc9lMc9h0ixm/l\nGzL9KhhUi0M1lXpcpIOVYsSfG6bcwvUI3E3nptPIzdAQFmGq89rVRYKGUnXIX86L\nC9tTDl/jOP1yFzD4Gd/6vasmUaEtzPu0d2wGNlqwJBYdIJnpQoYxTJPj3xrjZ7Ju\ns1CvpRKaUF4mpE2xjwLVNWjgpESN63fV7KKgiKHjoxBMIPlKQwmQCKF/JTlU8cGc\nf0qN0Vks4/6ykSHdX3hJUSUV56RYr0NS3kMkY2UnMw34nLCkRZ0ElMpAqL1T7ZY7\n1JLcpTbTUnrAiWwWEtaYSomH+/kjh6JzEA3/02v6Xx/1I39lxRV8fOk4mjHJuz0R\nReNJC1yTAgMBAAECggEAEja4ctEzZUvv1PX71dQpTZgYfKtrJYV8Fo1zLAhb+04+\nDjJsC4smtvfcIuStZ/7njB/0L+f5LytSkQdJAhzTuPJYK0DlIkuuY51MeoFND25F\nAJhoI6T0WcOdEl6Ua/QLWrdMvi0EVY1qhGcsi1Cd6sbIKVhEJ+g5cWNl1z/t1Lgr\ntWYGVFsXvCc753BRhvvsrNDHUaks83CY1uWY/G9xy9PYwSvWLPiCgwjI89iE3+WW\naWU6JCACKkTXPIt4YU8djZh+VlbhnWEzXGQL7V1XXu7g6oo7Xg/FHbGP7w7aVpTo\njx+Zt1TpFf41Ro+JoKPuRb3TOm13grCZoBDkTVFH2QKBgQD+2UgbTEdDX4SlEQYy\nsSj0Wn+pbHX9QfRW5RT8bUCoftbh0Y7XjHHlkDeEGhPQq8TLsb4IQM5yND/IwLH3\nJRwoKW9rZjnJpSUBHOUGe4911dN6e/faFLP0ZTAdw7nCacQkVlLHAsUWiN5VVFPW\nUA4DvX9Siz6ivzqtq2Cck4lB+wKBgQDd9drnZiHiGhzKBe6ilZbrhw2cVPkluZ77\ndOqhbzeo+3AGN/JP1o3zu58PM/HOLKs8j4GyxdivVBSVjBOn6w7AckHozwzB5ZLA\n8WBNRySVSwL+JaoVGW314iG2dfmovsZuk0QWzjz3xNxznkTZ2NF6CCdUz6ZTJH9U\nM7nuEyzkSQKBgQDpbyFrT71e6xlXEXb56+i1mkehauXQqx8ikQdeCLzXGge+JPOQ\nYOba/fS8Hh7UXuIOKqsEaEgxt8ZNHqRk2yslZn7Wg3afS5PPpyXpgDhyGQBzCyaG\nLbyAOkeOm/+FItg06JU+ET1yXMA6rNl2TzHnHyaG92DSNhOLjJUcFs/9DQKBgCYj\ngZqzPO056Wp5PHjpVUZhLWCIZUsrKvswKsTUdG7vzV70LAm15yxTN9CH72uq1z2P\ntwx93G679tF/gT0gMae1ukeDlECY7u+CSjbdG5cfjYMX+7KmbPOMCJjuipiJN1V2\nroNwqp80T2D6eAAqtkvOrNtw1raAlfRk8vTKjLMpAoGBAOw79ZromN45+Z7fgeqd\nRcoyzAE9ydo8zouJ8ZimEvV4+L5AceLCLs/Wh4I1uqs6pZi4yqAegHE852FyLXxR\nSDIRBSpT7F+YznhlUDRH/AR+BDbcovHVztJAnhB358V7yy7EFW1pVY7Vfi91/NMU\n4Pd1Zd8kERUgg7gKQ9VakiEP\n-----END PRIVATE KEY-----\n",
+  "client_email": "lpr-601@metal-being-425514-b4.iam.gserviceaccount.com",
+  "client_id": "118409207748845151508",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lpr-601%40metal-being-425514-b4.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

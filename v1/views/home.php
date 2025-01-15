@@ -79,6 +79,7 @@
             display: none;
             /* Initially hidden */
             transition: all 0.3s ease-in-out;
+            color: #000;
         }
 
         .dropdown-card.visible {
@@ -161,7 +162,7 @@
                                         <p>Registered Driver: Tunji Adeola</p>
                                         <p>Plate Number: BPSR-01FG</p>
                                         <p>License Expiry Date: 25th January, 2005</p>
-                                        <p>Car Type: Toyota Corolla</p>
+                                        <p>Car Type: JEEP</p>
                                     `;
                                 } else {
                                     dropdownCard.innerHTML = `
@@ -173,6 +174,7 @@
                                     `;
                                 }
                                 dropdownCard.classList.add('visible');
+                                used1 = true
 
                                 // fetch('https://api.ocr.space/parse/image', {
                                 //         method: 'POST',

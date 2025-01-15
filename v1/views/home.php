@@ -169,7 +169,7 @@
                                         <h5>Car Information</h5>
                                         <p>Registered Driver: Adameji Israel</p>
                                         <p>Plate Number: LND-408JM</p>
-                                        <p>License Expiry Date: 25th January, 2025</p>
+                                        <p>License Expiry Date: 10th September, 2025</p>
                                         <p>Car Type: Toyota Corolla</p>
                                     `;
                                 }

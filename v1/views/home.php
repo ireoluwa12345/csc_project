@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>License Plate Recognizer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -95,7 +96,8 @@
         const uploadButton = document.getElementById('uploadButton');
 
         uploadButton.addEventListener('click', () => {
-            console.log("hi");
+            uploadButton.disabled = true;
+            uploadButton.innerHTML += ` <i class="fa-solid fa-spinner fa-spin" id="spinner"></i>`
             const file = imageInput.files[0];
             if (file) {
                 const reader = new FileReader();
@@ -138,6 +140,9 @@
                                     })
                                     .catch(err => console.error(err));
                             }
+                            uploadButton.disabled = false;
+                            var spinner = document.getElementById('spinner');
+                            spinner.remove()
                         })
                         .catch(error => {
                             console.error('Error:', error);

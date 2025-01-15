@@ -97,6 +97,7 @@
 
         uploadButton.addEventListener('click', () => {
             uploadButton.disabled = true;
+            plateNumber.innerHTML = `<i class="fa-solid fa-spinner fa-spin" id="spinner"></i>`
             uploadButton.innerHTML += ` <i class="fa-solid fa-spinner fa-spin" id="spinner"></i>`
             const file = imageInput.files[0];
             if (file) {
@@ -138,7 +139,9 @@
                                             plateNumber.textContent = data.ParsedResults[0].ParsedText;
                                         }, 1000);
                                     })
-                                    .catch(err => console.error(err));
+                                    .catch(err => {
+                                        plateNumber.textContent = "Couldn't Read the Plate Number"
+                                    });
                             }
                             uploadButton.disabled = false;
                             var spinner = document.getElementById('spinner');

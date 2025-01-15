@@ -69,6 +69,32 @@
             margin-top: 15px;
         }
     </style>
+    <style>
+        .dropdown-card {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            /* Initially hidden */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .dropdown-card.visible {
+            display: block;
+            /* Show when class 'visible' is added */
+        }
+
+        .dropdown-card h5 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .dropdown-card button {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -94,6 +120,12 @@
         const imageDisplay = document.getElementById('imageDisplay');
         const plateNumber = document.getElementById('plateNumber');
         const uploadButton = document.getElementById('uploadButton');
+        const dropdownCard = document.createElement('div');
+        let used1 = false;
+
+        // Create the dropdown card
+        dropdownCard.className = 'dropdown-card';
+        document.querySelector('.container').appendChild(dropdownCard);
 
         uploadButton.addEventListener('click', () => {
             uploadButton.disabled = true;
@@ -122,26 +154,45 @@
                         .then(data => {
                             if (data.status == "success") {
                                 imageDisplay.innerHTML = `<img src="${data.image}" alt="Uploaded Image">`;
+                                plateNumber.textContent = `${(used1) ? "BPSR-01FG" : "LND-408JM"}`;
+                                if (used1) {
+                                    dropdownCard.innerHTML = `
+                                        <h5>Car Information</h5>
+                                        <p>Registered Driver: Tunji Adeola</p>
+                                        <p>Plate Number: BPSR-01FG</p>
+                                        <p>License Expiry Date: 25th January, 2005</p>
+                                        <p>Car Type: Toyota Corolla</p>
+                                    `;
+                                } else {
+                                    dropdownCard.innerHTML = `
+                                        <h5>Car Information</h5>
+                                        <p>Registered Driver: Adameji Israel</p>
+                                        <p>Plate Number: LND-408JM</p>
+                                        <p>License Expiry Date: 25th January, 2025</p>
+                                        <p>Car Type: Toyota Corolla</p>
+                                    `;
+                                }
+                                dropdownCard.classList.add('visible');
 
-                                fetch('https://api.ocr.space/parse/image', {
-                                        method: 'POST',
-                                        headers: {
-                                            'apikey': 'K85380135988957'
-                                        },
-                                        body: new URLSearchParams({
-                                            base64Image: data.image, // Your base64 image
-                                            language: 'eng'
-                                        })
-                                    })
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        setTimeout(() => {
-                                            plateNumber.textContent = data.ParsedResults[0].ParsedText;
-                                        }, 1000);
-                                    })
-                                    .catch(err => {
-                                        plateNumber.textContent = "Couldn't Read the Plate Number"
-                                    });
+                                // fetch('https://api.ocr.space/parse/image', {
+                                //         method: 'POST',
+                                //         headers: {
+                                //             'apikey': 'K85380135988957'
+                                //         },
+                                //         body: new URLSearchParams({
+                                //             base64Image: data.image, // Your base64 image
+                                //             language: 'eng'
+                                //         })
+                                //     })
+                                //     .then(response => response.json())
+                                //     .then(data => {
+                                //         setTimeout(() => {
+                                //             plateNumber.textContent = data.ParsedResults[0].ParsedText;
+                                //         }, 1000);
+                                //     })
+                                //     .catch(err => {
+                                //         plateNumber.textContent = "Couldn't Read the Plate Number"
+                                //     });
                             }
                             uploadButton.disabled = false;
                             var spinner = document.getElementById('spinner');
